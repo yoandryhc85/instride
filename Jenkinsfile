@@ -13,20 +13,20 @@ pipeline {
                    
                      sh '''
                      
-                     sudo docker build -t aptest:latest .
+                     sudo docker build -t appptest:latest .
                      
                      '''
                      
                    } 
                 }
-            stage('PushDockerImage') {
+            stage('PushDockerImages') {
                 
                   steps {
                    
                      sh '''
                      
-                     sudo docker tag aptest:latest yoandry/aptest:latest
-                     sudo docker push yoandry/aptest:latest
+                     sudo docker tag appptest:latest yoandry/appptest:latest
+                     sudo docker push yoandry/appptest:latest
                      
                      '''
                   }    
