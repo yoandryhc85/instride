@@ -13,7 +13,7 @@ pipeline {
                    
                      sh '''
                      
-                     sudo docker build -t apptest:latest .
+                     sudo docker build -t apptest:latest1 .
                      
                      '''
                      
@@ -25,9 +25,9 @@ pipeline {
                    
                      sh '''
                      
-                     sudo docker tag apptest:latest 
-yoandry/apptest:latest
-                     sudo docker push yoandry/apptest:latest
+                     sudo docker tag apptest:latest1 
+yoandry/apptest:latest1
+                     sudo docker push yoandry/apptest:latest1
                      
                      '''
                   }    
