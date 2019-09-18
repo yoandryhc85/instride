@@ -6,7 +6,7 @@ pipeline {
       ECR_PRODUCTION = "980422662115.dkr.ecr.us-west-1.amazonaws.com/production:latest"
     }
     stages {
-      stage ('Choose the environment') {
+      stage ('Choose the environments') {
             steps {
                 script {
                    source_env = input message: 'Source Environment?',parameters: [choice(choices: ['DEVELOPMENT', 'TESTING', 'PRODUCTION'],description: '', name: 'Environment')]
