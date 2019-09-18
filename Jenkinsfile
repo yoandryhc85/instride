@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-          stage('Checkout-git') {
+          stage('Check-git') {
                 
                 steps {
                 git 'git@github.com:yoandryhc85/instride.git'
