@@ -1,4 +1,6 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 RUN apt-get update
-RUN apt-get install python python-pip -y
-RUN apt-get install apache2 -y 
+RUN apt-get -y install apache2
+ADD index.html /var/www/html
+EXPOSE 81
+CMD /usr/sbin/apache2ctl -D FOREGROUND
